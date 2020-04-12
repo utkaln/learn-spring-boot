@@ -121,14 +121,14 @@ public class Speaker {
     /**
      * @return List<Sessions> return the sessions
      */
-    public List<Sessions> getSessions() {
+    public List<Session> getSessions() {
         return sessions;
     }
 
     /**
      * @param sessions the sessions to set
      */
-    public void setSessions(List<Sessions> sessions) {
+    public void setSessions(List<Session> sessions) {
         this.sessions = sessions;
     }
 

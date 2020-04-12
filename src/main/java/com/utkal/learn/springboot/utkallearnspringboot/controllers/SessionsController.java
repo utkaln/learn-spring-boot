@@ -54,5 +54,11 @@ public class SessionsController {
         return sessionRepository.saveAndFlush(existingSession);
     }
 
+    @RequestMapping(value = "{id}", method = RequestMethod.PATCH)
+    public Session minorUpdate(@PathVariable Long id, @RequestBody Session session){
+        Session existingSession = sessionRepository.getOne(id);
+        BeanUtils.copyProperties(session, existingSession, "session_id");
+        return sessionRepository.saveAndFlush(existingSession);
+    }
 
 }
